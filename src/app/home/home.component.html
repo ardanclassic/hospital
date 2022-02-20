@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="section header">
+    <h1>RS Semoga Lekas Sembuh</h1>
+  </div>
+  <div class="section content">
+    <div class="item print-queue" (click)="showQueue()">
+      <div class="title">Cetak Nomor Antrian</div>
+    </div>
+    <div class="item input-visitor" (click)="changePage('visitor/add')">
+      <div class="title">Isi Data Diri</div>
+    </div>
+    <div class="item list-visitor" (click)="changePage('visitor/list')">
+      <div class="title">Daftar Pasien</div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-outline-danger" (click)="resetAntrian()">
+    Reset Antrian
+  </button>
+</div>
