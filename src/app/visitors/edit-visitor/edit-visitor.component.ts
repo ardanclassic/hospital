@@ -52,9 +52,8 @@ export class EditVisitorComponent implements OnInit {
   getPasienDetail() {
     const pasienRef = this.db.collection('pasien').doc(this.userID);
     pasienRef.get().subscribe((res) => {
-      const user = res.data();
-      const datepattern =
-        /^([0-2][0-9]|(3)[0-1])(\-)(((0)[0-9])|((1)[0-2]))(\-)\d{4}$/i;
+      const user: any = res.data();
+      const datepattern = /^([0-2][0-9]|(3)[0-1])(\-)(((0)[0-9])|((1)[0-2]))(\-)\d{4}$/i;
       this.formField = this.formBuilder.group({
         nama: [user.nama, [Validators.required, Validators.maxLength(100)]],
         ktp: [user.ktp, [Validators.required, Validators.maxLength(50)]],

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +11,6 @@ import { EditVisitorComponent } from './visitors/edit-visitor/edit-visitor.compo
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from './tools/material.module';
-import { APP_BASE_HREF } from '@angular/common';
 
 // Firebase Modules
 import { AngularFireModule } from '@angular/fire';
