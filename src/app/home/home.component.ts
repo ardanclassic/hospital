@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   date: string = '';
   time: string = '';
   dataAntrian: any = [];
-  totalAntrian: number = 0;
+  totalAntrian: number;
   antrianDisabled: boolean = true;
 
   constructor(private router: Router, private db: AngularFirestore) {}
