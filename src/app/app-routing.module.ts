@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { InputVisitorDetailsComponent } from './input-visitor-details/input-visitor-details.component';
 import { MenuComponent } from './menu/menu.component';
-import { RequestQueueNumberComponent } from './request-queue-number/request-queue-number.component';
-import { VisitorListComponent } from './visitor-list/visitor-list.component';
+import { AddVisitorComponent } from './visitors/add-visitor/add-visitor.component';
+import { VisitorListComponent } from './visitors/visitor-list/visitor-list.component';
+import { EditVisitorComponent } from './visitors/edit-visitor/edit-visitor.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'task', component: MenuComponent},
-  {path: 'request-queue-number', component: RequestQueueNumberComponent},
-  {path: 'input_visitor_details', component: InputVisitorDetailsComponent},
-  {path: 'visitor-list', component: VisitorListComponent},
+  {path: 'visitor/add', component: AddVisitorComponent},
+  {path: 'visitor/list', component: VisitorListComponent},
+  {path: 'visitor/edit/:id', component: EditVisitorComponent},
 ];
 
 @NgModule({

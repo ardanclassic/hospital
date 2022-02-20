@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="section header">
+    <h1>Daftar Pasien</h1>
+  </div>
+  <div class="section content">
+    <div class="card">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Jenis Kelamin</th>
+              <th scope="col">Tanggal Lahir</th>
+              <th scope="col">No Telepon</th>
+              <th scope="col">Alamat</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngIf="loading" class="loading">
+              <th scope="row"></th>
+              <td colspan="6">Memuat data . . .</td>
+            </tr>
+
+            <tr *ngFor="let p of pasien" class="user-data">
+              <td class="id">{{ p.id }}</td>
+              <td class="nama">{{ p.nama }}</td>
+              <td class="gender">{{ p.gender }}</td>
+              <td class="birthdate">{{ p.birthdate }}</td>
+              <td class="phone">{{ p.phone }}</td>
+              <td class="alamat">{{ p.alamat }}</td>
+              <td class="action">
+                <button class="btn btn-primary" (click)="editPage(p.uid)">
+                  Edit
+                </button>
+                <button class="btn btn-danger" (click)="deleteAction(p.uid)">
+                  Hapus
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="action-area">
+          <button class="btn btn-outline-primary" (click)="backToHome()">Kembali</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

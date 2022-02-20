@@ -4,12 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InputVisitorDetailsComponent } from './input-visitor-details/input-visitor-details.component';
-import { RequestQueueNumberComponent } from './request-queue-number/request-queue-number.component';
+import { AddVisitorComponent } from './visitors/add-visitor/add-visitor.component';
+import { VisitorListComponent } from './visitors/visitor-list/visitor-list.component';
+import { EditVisitorComponent } from './visitors/edit-visitor/edit-visitor.component';
 import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './home/home.component';
 import { MaterialModule } from './tools/material.module';
 import { APP_BASE_HREF } from '@angular/common';
-import { VisitorListComponent } from './visitor-list/visitor-list.component';
 
 // Firebase Modules
 import { AngularFireModule } from '@angular/fire';
@@ -29,13 +30,12 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     MenuComponent,
-    InputVisitorDetailsComponent,
-    RequestQueueNumberComponent,
-    VisitorListComponent
+    HomeComponent,
+    AddVisitorComponent,
+    VisitorListComponent,
+    EditVisitorComponent,
   ],
-  providers: [
-    { provide: APP_BASE_HREF, useValue: '/' },
-  ],
-  bootstrap: [AppComponent]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
