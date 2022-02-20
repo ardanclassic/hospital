@@ -4,3 +4,41 @@ body {
     padding: 48px 0;
   }
 }
+
+/* SETUP SWEET ALERT POPUP for Nomor Antrian */
+.swal2-html-container {
+  padding-bottom: 24px;
+  .popup-antrian {
+    max-width: 500px;
+    text-align: center;
+    p {
+      margin: 0;
+    }
+    .head {
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .divider {
+      width: 90%;
+      height: 1px;
+      background-color: #aaa;
+      margin: 16px auto;
+    }
+    .content {
+      .info {
+        margin-bottom: 16px;
+        h1 {
+          font-size: 5rem;
+        }
+      }
+      .barcode {
+        img {
+          width: 70%;
+        }
+      }
+      .date {
+        font-weight: 600;
+      }
+    }
+  }
+}
